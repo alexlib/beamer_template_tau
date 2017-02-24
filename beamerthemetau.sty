@@ -1,0 +1,85 @@
+% The University of Tennessee, Knoxville theme
+% Made by Enda Hargaden, July 2016
+% Theme mimicks the PPT format provided by UT
+
+\mode<presentation>
+\usepackage{xcolor}
+\usepackage{graphicx}
+
+% Use Helvetica, as requested
+\usepackage[scaled]{helvet}
+\usepackage[T1]{fontenc}
+\renewcommand\familydefault{\sfdefault}
+
+% Turn off those navigation symbols nobody uses
+\setbeamertemplate{navigation symbols}{}
+
+% The new \br command creates a linebreak
+\newcommand{\br}{\vspace{\baselineskip}}
+
+%% Tennessee Orange and Smokey Gray
+% \definecolor{black}{RGB}{255, 130, 0}
+% \definecolor{black}{RGB}{0, 0, 0}
+\definecolor{Smokey}{RGB}{88, 89, 91}
+
+\setbeamercolor{frametitle}{fg = black}
+\setbeamercolor{title}{fg = black}
+
+% In case you choose to display the Table of Contents, or the Outline slide.
+\setbeamercolor{section in toc}{fg = Smokey}
+\setbeamercolor{section in toc shaded}{fg = black}
+
+% The colour of all the items, subitems and and subsubitems
+\setbeamercolor{item}{fg = Smokey}
+\setbeamercolor{subitem}{fg = black}
+\setbeamercolor{subsubitem}{fg = Smokey}
+\setbeamercolor{normal text}{fg = Smokey}
+
+\setbeamercolor{postit}{fg=white,bg=black}
+\setbeamercolor{postthat}{fg=black,bg=black}
+\useinnertheme{rounded}
+
+
+\setbeamerfont{block title}{size={}}
+
+\setbeamertemplate{title page}{
+\begin{center}\vspace{0.5\baselineskip}
+{\Large \textcolor{black}{\inserttitle}}
+
+\insertsubtitle
+
+\br
+
+{\large \insertauthor}
+
+\br
+{\small \insertinstitute}
+
+\br
+\insertdate
+
+\br
+
+\includegraphics[width=1.3in,keepaspectratio]{taufront}
+
+\end{center}
+}
+
+
+
+
+
+\defbeamertemplate*{footline}{}
+{
+\ifnum \insertpagenumber>1
+\vspace{-0.9cm}\begin{beamercolorbox}[sep=0em,ht=0.4cm,dp=0.3cm,wd=\paperwidth,leftskip=0cm,center]{postit}\parbox{0.333333\paperwidth}{{\tiny \insertshorttitle{} \insertframenumber{}} / \inserttotalframenumber}\parbox{0.333333\paperwidth}{ \hspace{0.01cm} }\parbox{0.31\paperwidth}{\hfill\includegraphics[width=2.2cm]{tau_black}}\parbox{0.034\paperwidth}{ }\end{beamercolorbox}
+\else
+\vspace{-0.9cm}\begin{beamercolorbox}[sep=0em,ht=0.4cm,dp=0.3cm,wd=\paperwidth,leftskip=0cm,center]{postthat}\parbox{0.333333\paperwidth}{\hfill}\parbox{0.333333\paperwidth}{ \hspace{0.01cm} }\parbox{0.31\paperwidth}{\hfill}\parbox{0.034\paperwidth}{ }\end{beamercolorbox}
+
+\fi
+}
+\addtocounter{framenumber}{-1}
+
+
+\mode
+<all>
