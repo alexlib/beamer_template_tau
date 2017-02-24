@@ -14,7 +14,7 @@ How to install the TAU theme
 
 ```
 \documentclass{beamer}
-\usetheme{utk}
+\usetheme{tau}
 
 \title[Optional Short Title for Footer]{My Title}
 \author{My Name}
