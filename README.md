@@ -33,3 +33,5 @@ And this is my content
 
 \end{document}
 ```
+
+![Example slides](example_slides.png)
